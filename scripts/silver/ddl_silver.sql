@@ -28,16 +28,16 @@ CREATE TABLE silver.crm_cust_info (
 
 -- CRM PRODUCT INFO
 DROP TABLE IF EXISTS silver.crm_prd_info;
-
-CREATE TABLE silver.crm_prd_info (
-    prd_id        INT,
-    prd_key       VARCHAR(50),
-    prd_nm        VARCHAR(50),
-    prd_cost      INT,
-    prd_line      VARCHAR(50),
-    prd_start_dt  DATE,
-    prd_end_dt    DATE,
-	dwh_create_date 	TIMESTAMPTZ DEFAULT clock_timestamp()
+CREATE  TABLE silver.crm_prd_info (
+    prd_id          INT,
+    cat_id          VARCHAR(50),
+    prd_key         VARCHAR(50),
+    prd_nm          VARCHAR(50),
+    prd_cost        INT,
+    prd_line        VARCHAR(50),
+    prd_start_dt    DATE,
+    prd_end_dt      DATE,
+    dwh_create_date TIMESTAMPTZ DEFAULT clock_timestamp()
 );
 
 
